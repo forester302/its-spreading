@@ -1,25 +1,33 @@
-//disable sprite animation
-image_speed = 0
-//init route
-if !variable_instance_exists(id, "route") {
-	route = [
-		[obj_station_1, 0], 
-		[obj_station_2, 0],
-	]
-}
-route_index = 0
-path_start_timer = -1
+// [Initialize] Sets the default speed of the NPCs (to be used in adding path points)
+npc_speed = 1000;
 
-//init path
+// Disables the animation of the NPC
+image_speed = 0
+
+
+// Setting up everything needed for this NPCs path
+
+// [Initialize] Creates a blank path set to "path"
 path = path_add()
+// Sets the path to not loop
 path_set_closed(path, false)
 
-//set up intial two points
-var _path_point = instance_find(route[route_index][0], 0)
-path_add_point(path, x, y, 1000)
-path_add_point(path, _path_point.x, _path_point.y, 1000)
-path_start(path, 1, path_action_stop, true)
+// Adds a point with the current x and y of this npc, using npc_speed, to "path"
+path_add_point(path, x, y, npc_speed)
 
-//set up for velocity tracking
+// [Initialize] Sets the timer to how long the NPC should wait before moving
+path_start_timer = -1;
+// Says the path is currently completed (<1 means it's running)
+path_position = 1;
+
+
+// Set up for velocity tracking
+
+// [Initialize] Sets the previous x to the current x
 pre_pos_x = x
+// [Initialize] Sets the previous y to the current y
 pre_pos_y = y
+
+
+// [Initialize] Sets the infected level to 0 (higher numbers means more infected, 9 being the max)
+infected_level = 0;

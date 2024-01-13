@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_npc_1",
+  "name": "obj_wall",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Objects/Game/NPC.yy",
+    "name": "Environment",
+    "path": "folders/Objects/Game/Environment.yy",
   },
-  "parentObjectId": {
-    "name": "obj_npc_parent",
-    "path": "objects/obj_npc_parent/obj_npc_parent.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_npc",
-    "path": "sprites/spr_npc/spr_npc.yy",
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
   },
   "spriteMaskId": null,
   "visible": true,
