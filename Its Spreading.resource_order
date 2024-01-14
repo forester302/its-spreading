@@ -33,7 +33,7 @@
     {"name":"spr_ts_floor","order":1,"path":"sprites/spr_ts_floor/spr_ts_floor.yy",},
     {"name":"Player","order":16,"path":"objects/Player/Player.yy",},
     {"name":"obj_station_2","order":2,"path":"objects/obj_station_2/obj_station_2.yy",},
-    {"name":"obj_button_debug19","order":4,"path":"objects/obj_button_debug19/obj_button_debug19.yy",},
+    {"name":"obj_button_path","order":4,"path":"objects/obj_button_path/obj_button_path.yy",},
     {"name":"obj_button_start","order":1,"path":"objects/obj_button_start/obj_button_start.yy",},
     {"name":"rm_menu","order":1,"path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"obj_station_1","order":1,"path":"objects/obj_station_1/obj_station_1.yy",},
@@ -44,6 +44,5 @@
     {"name":"ts_floor","order":1,"path":"tilesets/ts_floor/ts_floor.yy",},
     {"name":"obj_npc_1","order":1,"path":"objects/obj_npc_1/obj_npc_1.yy",},
     {"name":"obj_button_quit","order":3,"path":"objects/obj_button_quit/obj_button_quit.yy",},
-    {"name":"obj_npc_betterpathfinding","order":3,"path":"objects/obj_npc_betterpathfinding/obj_npc_betterpathfinding.yy",},
   ],
 }

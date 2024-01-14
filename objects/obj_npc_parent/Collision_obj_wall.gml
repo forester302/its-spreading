@@ -10,9 +10,4 @@ path_end();
 y += 1;
 
 // Says the path is currently completed
-path_position = 1;
-
-// Deletes the point of the path that would be in the wall (endpoint)
-path_delete_point(path, 1);
-// Adds this NPC's current position, using npc_speed, to "path"
-path_add_point(path, x, y, npc_speed);
+path_completed = true;

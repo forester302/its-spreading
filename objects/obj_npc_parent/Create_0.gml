@@ -1,4 +1,4 @@
-// [Initialize] Sets the default speed of the NPCs (to be used in adding path points)
+// [Initialize] Sets the default speed of the NPCs
 npc_speed = 1000;
 
 // Disables the animation of the NPC
@@ -7,19 +7,22 @@ image_speed = 0
 
 // Setting up everything needed for this NPCs path
 
-// [Initialize] Creates a blank path set to "path"
-path = path_add()
-// Sets the path to not loop
-path_set_closed(path, false)
 
-// Adds a point with the current x and y of this npc, using npc_speed, to "path"
-path_add_point(path, x, y, npc_speed)
+if (global.pathfinding)
+{
+	// [Initialize] Creates a blank path set to "path"
+	path = path_add()
+}
 
 // [Initialize] Sets the timer to how long the NPC should wait before moving
 path_start_timer = -1;
-// Says the path is currently completed (<1 means it's running)
-path_position = 1;
+// Says the path is currently completed
+path_completed = true
 
+// [Initalize] x value for the target
+target_x = x;
+// [Initalize] y value for the target
+target_y = y;
 
 // Set up for velocity tracking
 

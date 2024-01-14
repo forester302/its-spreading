@@ -1,26 +1,27 @@
-// If the timer is equal to zero
-if (path_start_timer == 0) 
+// when pathfinding is on. this triggers when the timer hits 0, otherwise triggers when timer hits 1
+if (global.pathfinding and path_start_timer == 0)
 {
-	// Starts "path" at a speed of 1, tells it to stop the path once it's completed, and to 
-	// start absolutely from the start point and move to the end point
-	path_start(path, 1, path_action_stop, true)
+	path_start(path, 10, path_action_stop, true)
+	path_completed = false
+}
+else if (!global.pathfinding and path_start_timer == -1) 
+{	
+	// take a step towards the target
+	mp_potential_step(target_x, target_y, 10, false)
 }
 
-// If the timer is greater than -1, subtract 1
-/// Must be after 'timer == 0' or else it will be one game frame short
-if (path_start_timer > -1) path_start_timer -= 1
 
-// If the path is completed and the timer equals -1 (not running)
-if ((path_position == 1) and (path_start_timer == -1))
+
+//  decrement the timer
+if (path_start_timer > -1) path_start_timer -= 1
+// set path as completed when pathfinding is on
+if (global.pathfinding and path_position == 1) path_completed = true
+// set path as completed when pathfinding is off
+if (!global.pathfinding and floor(target_x) == floor(x) and floor(target_y) == floor(y)) path_completed = true
+
+//if path is completed and the timer is not running
+if (path_completed and path_start_timer == -1)
 {
-	// While the number of points in "path" is greater than 1
-	while (path_get_length(path) > 1)
-	{
-		// Deletes the first point
-		path_delete_point(path, 0)
-	}
-	
-	
 	// [Declare] 1 = station, 0 = random location
 	var _path_type;
 	// [Initialize] Generates a random number b/w 0 and 9 (inclusive)
@@ -53,8 +54,9 @@ if ((path_position == 1) and (path_start_timer == -1))
 			else break
 		}
 		
-		// Add the point to "path" using "npc_speed"
-		path_add_point(path, _path_point_x, _path_point_y, npc_speed)
+		// Set the target position
+		target_x = _path_point_x;
+		target_y = _path_point_y;
 	}
 	// If the path type is not equal to 0
 	else
@@ -72,12 +74,23 @@ if ((path_position == 1) and (path_start_timer == -1))
 			_chosen_station = instance_find(obj_station_parent, _rand_station_num);
 		}
 		
-		// Add the point to "path" using "npc_speed"
-		path_add_point(path, _chosen_station.x, _chosen_station.y, npc_speed);
+		// Set the target position
+		target_x = _chosen_station.x;
+		target_y = _chosen_station.y;
 	}
 	
 	// Sets the timer to 60 (frames)
 	path_start_timer = 60;
+	// Sets the path to not be completed
+	path_completed = false
+	
+	if (global.pathfinding)
+	{
+		// path can be up to 4 times longer than a straight line to the target
+		var _factor = 4
+		// calculate the path to the target
+		mp_potential_path(path, target_x, target_y, npc_speed, _factor, false)
+	}
 }
 
 
