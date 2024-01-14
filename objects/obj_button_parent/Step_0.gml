@@ -11,7 +11,7 @@ if (hovering && mouse_check_button_pressed(mb_left)) {
 
 /// This makes sure buttons are only pressed if the player is hovering over and fully presses and releases
 // If the left mouse button is released
-if (mouse_check_button_released(mb_left)) {
+if (clicked and mouse_check_button_released(mb_left)) {
 	// Sets to false
 	clicked = false;
 	
