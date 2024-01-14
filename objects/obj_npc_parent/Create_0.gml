@@ -31,3 +31,5 @@ pre_pos_y = y
 
 // [Initialize] Sets the infected level to 0 (higher numbers means more infected, 9 being the max)
 infected_level = 0;
+// [Initialize] Timer for how long this NPC has been in the radius of an infected NPC for
+infected_timer = 0;

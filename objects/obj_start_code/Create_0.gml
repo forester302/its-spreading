@@ -9,3 +9,7 @@ global.debug = false
 
 // [Assign] Set global initialized to true (yes)
 global.initialized = true
+
+
+//Variables
+global.infection_time = 60

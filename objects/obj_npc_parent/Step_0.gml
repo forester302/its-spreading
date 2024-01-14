@@ -112,3 +112,43 @@ else {
 pre_pos_x = x
 // [Assign] Sets the previous y to the current y
 pre_pos_y = y
+
+
+//Infection
+
+// [Assign] can this NPC be infected this game step
+var _infectable = false;
+
+//Loop through NPC instances
+for (var _i = 0; _i < instance_number(obj_npc_parent); _i++)
+{
+	// Get the instance of the NPC
+	var _npc_instance = instance_find(obj_npc_parent, _i);
+	
+	// Skip this NPC
+	if (_npc_instance.id = id) continue;
+	
+	//Calculate distance
+	var _distance = point_distance(x, y, _npc_instance.x, _npc_instance.y);
+	
+	// Work out if can be infected
+	var _can_infect = _npc_instance.infected_level > 0 && infected_level == 0;
+	// Work out if in range to infect
+	var _within_range = _distance <= 100;
+	
+	if (_can_infect and _within_range)
+	{
+		// Increment timer
+		infected_timer += 1;
+		// Can be infected this game frame
+		_infectable = true;
+	}
+}
+if (_infectable and infected_timer > global.infection_time)
+{
+	infected_level = 1;
+}
+else if (!_infectable)
+{
+	infected_timer = 0;
+}
