@@ -67,6 +67,7 @@
     {"id":{"name":"obj_npc_2","path":"objects/obj_npc_2/obj_npc_2.yy",},},
     {"id":{"name":"spr_station","path":"sprites/spr_station/spr_station.yy",},},
     {"id":{"name":"obj_npc_1","path":"objects/obj_npc_1/obj_npc_1.yy",},},
+    {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],

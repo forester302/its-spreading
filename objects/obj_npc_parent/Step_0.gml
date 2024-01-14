@@ -11,7 +11,7 @@ if (path_start_timer == 0)
 if (path_start_timer > -1) path_start_timer -= 1
 
 // If the path is completed and the timer equals -1 (not running)
-if (path_position = 1 and path_start_timer == -1)
+if (path_position == 1 and path_start_timer == -1)
 {
 	// While the number of points in "path" is greater than 1
 	while (path_get_length(path) > 1)
