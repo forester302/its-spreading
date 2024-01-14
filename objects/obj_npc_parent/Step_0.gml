@@ -11,7 +11,7 @@ if (path_start_timer == 0)
 if (path_start_timer > -1) path_start_timer -= 1
 
 // If the path is completed and the timer equals -1 (not running)
-if (path_position == 1 and path_start_timer == -1)
+if ((path_position == 1) and (path_start_timer == -1))
 {
 	// While the number of points in "path" is greater than 1
 	while (path_get_length(path) > 1)
@@ -114,41 +114,50 @@ pre_pos_x = x
 pre_pos_y = y
 
 
-//Infection
+// Infection of this NPC
 
-// [Assign] can this NPC be infected this game step
+// [Initializing] Sets whether this NPC can be infected this frame to false
 var _infectable = false;
 
-//Loop through NPC instances
+// Loop through instances of NPCs
+/// Initializes _i to 0, runs as long as _i is less than the number of NPCs, and adds one to _i each time 
+/// the loop runs
 for (var _i = 0; _i < instance_number(obj_npc_parent); _i++)
 {
-	// Get the instance of the NPC
+	// [Initialize] Sets the instance of the NPC
 	var _npc_instance = instance_find(obj_npc_parent, _i);
+	// Skips this NPC
+	/// Checks if the id of the grabbed NPC is the same as the id of the NPC this code runs on
+	if (_npc_instance.id == id) continue;
 	
-	// Skip this NPC
-	if (_npc_instance.id = id) continue;
-	
-	//Calculate distance
+	// [Initialize] Sets the calculated distance between the current NPC and grabbed NPC
 	var _distance = point_distance(x, y, _npc_instance.x, _npc_instance.y);
 	
-	// Work out if can be infected
-	var _can_infect = _npc_instance.infected_level > 0 && infected_level == 0;
-	// Work out if in range to infect
-	var _within_range = _distance <= 100;
+	// [Initialize] Sets if this NPC can be infected
+	/// Checks if the grabbed NPC is infected and if this NPC isn't
+	var _can_infect = (_npc_instance.infected_level > 0) and (infected_level == 0);
+	// [Initialize] Sets if this NPC is in range of the other to be infected
+	var _within_range = (_distance <= 100);
 	
+	// If the grabbed NPC can infect this and if this NPC is within range
 	if (_can_infect and _within_range)
 	{
-		// Increment timer
+		// Increments timer by one frame
 		infected_timer += 1;
-		// Can be infected this game frame
+		// [Assign] Sets if this NPC can be infected this game frame
 		_infectable = true;
 	}
 }
-if (_infectable and infected_timer > global.infection_time)
+
+// If this NPC is infectable and it's been (infection_time) frames
+if (_infectable and (infected_timer > global.infection_time))
 {
+	// [Assign] Sets the infected level of this NPC to 1
 	infected_level = 1;
 }
+// If this NPC is not infectable
 else if (!_infectable)
 {
+	// [Assign] Reset the timer
 	infected_timer = 0;
 }

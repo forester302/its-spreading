@@ -4,12 +4,12 @@ if variable_global_exists("initialized") return
 // Randomizes the seed (aka: what random values are generated) *once* when the game runs
 randomize();
 
-// [Assign] Set global debug mode to false (off)
+// [Initialize] Set global debug mode to false (off)
 global.debug = false
 
-// [Assign] Set global initialized to true (yes)
+// [Initialize] Set global initialized to true (yes)
 global.initialized = true
 
 
-//Variables
+// [Initialize] Sets the infection time to 60 frames (1 second)
 global.infection_time = 60
