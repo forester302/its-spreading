@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_npc_1",
+  "name": "obj_npc_2",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_npc_m",
-    "path": "sprites/spr_npc_m/spr_npc_m.yy",
+    "name": "spr_npc_f",
+    "path": "sprites/spr_npc_f/spr_npc_f.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -1,3 +1,11 @@
+// If debug mode is on
+if (global.debug)
+{
+	// Draw circles for infection radius
+	draw_set_color(c_blue)
+	draw_circle(x, y, 100, true)
+}
+
 // Draws the sprite of this NPC
 draw_self()
 
