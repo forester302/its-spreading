@@ -2,7 +2,7 @@
 event_inherited();
 
 
-// [Overwrite]
+// [Overwrite] Sets the text to be blank
 button_text = ""
 
 // Sets the function to quit the game when the button is released

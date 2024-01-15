@@ -1,31 +1,38 @@
-// when pathfinding is on. this triggers when the timer hits 0, otherwise triggers when timer hits 1
+// If pathfinding is simple and when the timer hits 0
 if (global.pathfinding and path_start_timer == 0)
 {
-	path_start(path, 10, path_action_stop, true)
-	path_completed = false
+	// Starts path, at 10 speed, sets to absolute, and stops when completed
+	path_start(path, npc_speed, path_action_stop, true);
+	// [Assign] Sets to path is incomplete
+	path_completed = false;
 }
+// Else if pathfinding is advanced and when the timer hits -1
 else if (!global.pathfinding and path_start_timer == -1) 
 {	
-	// take a step towards the target
-	mp_potential_step(target_x, target_y, 10, false)
+	// Takes a step (10 pixels) towards the target avoiding solid instances
+	mp_potential_step(target_x, target_y, npc_speed, false);
+	path_completed = false
 }
 
 
+// If the timer is running, decrements the timer by one
+if (path_start_timer > -1) {path_start_timer -= 1};
+// If pathfinding is simple and the path is finished, sets path is finished to true
+if (global.pathfinding and path_position == 1) {path_completed = true};
+// If pathfinding is advanced and the NPC is at the target
+if (!global.pathfinding and floor(target_x) == floor(x) and floor(target_y) == floor(y)) 
+{
+	// Sets path is finished to true
+	path_completed = true;
+}
 
-//  decrement the timer
-if (path_start_timer > -1) path_start_timer -= 1
-// set path as completed when pathfinding is on
-if (global.pathfinding and path_position == 1) path_completed = true
-// set path as completed when pathfinding is off
-if (!global.pathfinding and floor(target_x) == floor(x) and floor(target_y) == floor(y)) path_completed = true
-
-//if path is completed and the timer is not running
-if (path_completed and path_start_timer == -1)
+// If path is completed and the timer is not running
+if (path_completed and (path_start_timer == -1))
 {
 	// [Declare] 1 = station, 0 = random location
 	var _path_type;
 	// [Initialize] Generates a random number b/w 0 and 9 (inclusive)
-	var _rand_num_1 = random_range(0, 9)
+	var _rand_num_1 = random_range(0, 9);
 
 	// If the random number is less than 6, set the path type to 1
 	if (_rand_num_1 < 7) {_path_type = 1;}
@@ -36,8 +43,8 @@ if (path_completed and path_start_timer == -1)
 	if (_path_type = 0)
 	{
 		// Set the position of the path point to inside a wall
-		var _path_point_x = instance_find(obj_wall, 0).x
-		var _path_point_y = instance_find(obj_wall, 0).y
+		var _path_point_x = instance_find(obj_wall, 0).x;
+		var _path_point_y = instance_find(obj_wall, 0).y;
 		
 		// While the path point is invalid (in a wall or station or too close to current NPC position)
 		while (true)
@@ -84,12 +91,14 @@ if (path_completed and path_start_timer == -1)
 	// Sets the path to not be completed
 	path_completed = false
 	
+	/// Not sure what's going on here (checking for simple, modifying advanced???)
+	// If pathfinding is simple
 	if (global.pathfinding)
 	{
-		// path can be up to 4 times longer than a straight line to the target
-		var _factor = 4
-		// calculate the path to the target
-		mp_potential_path(path, target_x, target_y, npc_speed, _factor, false)
+		// The path can be up to 4 times longer than a straight line to the target
+		var _factor = 4;
+		// Calculates the path to the target
+		mp_potential_path(path, target_x, target_y, npc_speed, _factor, false);
 	}
 }
 

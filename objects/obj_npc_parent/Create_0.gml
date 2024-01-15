@@ -1,5 +1,5 @@
 // [Initialize] Sets the default speed of the NPCs
-npc_speed = 1000;
+npc_speed = 6;
 
 // Disables the animation of the NPC
 image_speed = 0
@@ -7,7 +7,7 @@ image_speed = 0
 
 // Setting up everything needed for this NPCs path
 
-
+// If pathfinding is set to basic
 if (global.pathfinding)
 {
 	// [Initialize] Creates a blank path set to "path"
@@ -23,6 +23,7 @@ path_completed = true
 target_x = x;
 // [Initalize] y value for the target
 target_y = y;
+
 
 // Set up for velocity tracking
 

@@ -10,7 +10,7 @@ text_color = c_black;
 text_font = fnt_menu;
 
 // [Initialized] Used in children to set the text that will be drawn
-button_text = "Text"
+button_text = "Why is this here?"
 
 
 // Used in children to determine what happens when this button is clicked

@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Functions",
-    "path": "folders/Objects/Game/Functions.yy",
+    "path": "folders/Objects/Functions.yy",
   },
   "parentObjectId": null,
   "persistent": false,

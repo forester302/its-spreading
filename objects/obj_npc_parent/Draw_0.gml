@@ -5,16 +5,18 @@ if (global.debug)
 	draw_set_color(c_blue)
 	draw_circle(x, y, 100, true)
 	
-	// Draw circle for target
+	// Draw circle for pathfinding target
 	draw_circle(target_x, target_y, 10, false)
+	
+	// If pathfinding is set to advanced
 	if (!global.pathfinding)
 	{
-		// Draw line to target
+		// Draws a line to the target (rather than to every point avoiding collision)
 		draw_line(x, y, target_x, target_y)
 	}
 	else
 	{
-		// Draw path to target
+		// Draws the path to target
 		draw_path(path, x, y, true)
 	}
 }

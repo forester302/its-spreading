@@ -18,7 +18,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Game","folderPath":"folders/Objects/Game.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Environment","folderPath":"folders/Objects/Game/Environment.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Functions","folderPath":"folders/Objects/Game/Functions.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Functions","folderPath":"folders/Objects/Functions.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPC","folderPath":"folders/Objects/Game/NPC.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Stations","folderPath":"folders/Objects/Game/Stations.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Objects/Menu.yy",},
