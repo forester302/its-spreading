@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_button",
-    "path": "sprites/spr_button/spr_button.yy",
+    "name": "spr_button_quit",
+    "path": "sprites/spr_button_quit/spr_button_quit.yy",
   },
   "spriteMaskId": null,
   "visible": true,

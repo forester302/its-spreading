@@ -1,5 +1,6 @@
 // Ensure this code only runs once (should be arbitrary)
-if variable_global_exists("initialized") {
+if variable_global_exists("initialized")
+{
 	return
 }
 // Randomizes the seed (aka: what random values are generated) *once* when the game runs

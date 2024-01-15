@@ -44,6 +44,8 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"spr_button_start","path":"sprites/spr_button_start/spr_button_start.yy",},},
+    {"id":{"name":"spr_button_quit","path":"sprites/spr_button_quit/spr_button_quit.yy",},},
     {"id":{"name":"spr_status_icon","path":"sprites/spr_status_icon/spr_status_icon.yy",},},
     {"id":{"name":"obj_station_5","path":"objects/obj_station_5/obj_station_5.yy",},},
     {"id":{"name":"spr_npc_m","path":"sprites/spr_npc_m/spr_npc_m.yy",},},

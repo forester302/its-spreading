@@ -10,7 +10,7 @@
       5,
     ],
   },
-  "out_columns": 4,
+  "out_columns": 3,
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
@@ -26,7 +26,7 @@
     "name": "Default",
     "path": "texturegroups/Default",
   },
-  "tile_count": 16,
+  "tile_count": 10,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -39,12 +39,6 @@
       7,
       8,
       9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
     ],
     "SerialiseFrameCount": 1,
   },

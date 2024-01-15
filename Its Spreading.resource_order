@@ -26,6 +26,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_button_start","order":1,"path":"sprites/spr_button_start/spr_button_start.yy",},
+    {"name":"spr_button_quit","order":2,"path":"sprites/spr_button_quit/spr_button_quit.yy",},
     {"name":"spr_status_icon","order":1,"path":"sprites/spr_status_icon/spr_status_icon.yy",},
     {"name":"obj_station_5","order":5,"path":"objects/obj_station_5/obj_station_5.yy",},
     {"name":"obj_input_manager","order":5,"path":"objects/obj_input_manager/obj_input_manager.yy",},
