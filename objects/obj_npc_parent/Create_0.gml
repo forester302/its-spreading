@@ -7,9 +7,14 @@ image_speed = 0
 
 // Setting up everything needed for this NPCs path
 
+
 // If pathfinding is set to basic
 if (global.pathfinding)
 {
+
+
+
+
 	// [Initialize] Creates a blank path set to "path"
 	path = path_add()
 }
