@@ -1,12 +1,10 @@
 // Ensure this code only runs once (should be arbitrary)
-if variable_global_exists("initialized")
-{
-	return
-}
-
+if variable_global_exists("initialized") {exit}
+	
 
 // Randomizes the seed (aka: what random values are generated) *once* when the game runs
 randomize();
+
 
 // [Initialize] Sets global debug mode to false (off)
 global.debug = false
@@ -24,3 +22,11 @@ global.infection_time = 60
 // Sets the settings for advanced pathfinding (hover over function and read)
 //mp_potential_settings(45, 5, 1, true)
 mp_potential_settings(45, 5, 1, true)
+
+
+// [Initialize] Sets whether the user pressed escape in rm_game or not to false
+global.pause_signal = false;
+
+
+// [Initialize] Set global initialized to true (yes)
+global.initialized = true
