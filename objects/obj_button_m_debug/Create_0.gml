@@ -1,9 +1,9 @@
 // Inherit the parent event
 event_inherited();
 
-get_determiner = function ()
+get_determiner = function()
 {
-	return global.debug	
+	return global.debug;
 }
 
 label = "Debug "

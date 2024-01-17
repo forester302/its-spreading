@@ -12,7 +12,7 @@ var _inst = instance_create_depth(0, 0, 0, obj_fade);
 with (_inst)
 {
 	// [Assign] Sets local variable to _room
-	_target_room = _room;
+	target_room = _room;
 	// [Assign] Sets local variable to _dur
 	duration = _dur;
 	// [Assign] Sets local variable to _color

@@ -73,10 +73,9 @@
     {"id":{"name":"spr_m_button","path":"sprites/spr_m_button/spr_m_button.yy",},},
     {"id":{"name":"spr_sss_logo","path":"sprites/spr_sss_logo/spr_sss_logo.yy",},},
     {"id":{"name":"obj_virus","path":"objects/obj_virus/obj_virus.yy",},},
-    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+    {"id":{"name":"obj_fade_controller","path":"objects/obj_fade_controller/obj_fade_controller.yy",},},
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},
-    {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"obj_button_p_menu","path":"objects/obj_button_p_menu/obj_button_p_menu.yy",},},
     {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
@@ -103,10 +102,9 @@
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_logo","path":"rooms/rm_logo/rm_logo.yy",},},
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
-    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

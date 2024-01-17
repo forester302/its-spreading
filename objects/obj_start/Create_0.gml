@@ -7,7 +7,7 @@ randomize();
 
 
 // [Initialize] Sets global debug mode to false (off)
-global.debug = false
+global.debug = false;
 
 // [Initialize] Sets global pathfinding mode to false (advanced)
 global.pathfinding = false
