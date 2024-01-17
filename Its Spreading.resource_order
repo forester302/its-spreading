@@ -1,4 +1,11 @@
 {
-  "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Main","order":4,"path":"folders/Objects/Menu/Main.yy",},
+    {"name":"Pause","order":5,"path":"folders/Objects/Menu/Pause.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"obj_button_m_parent","order":2,"path":"objects/obj_button_m_parent/obj_button_m_parent.yy",},
+    {"name":"obj_logo","order":1,"path":"objects/obj_logo/obj_logo.yy",},
+    {"name":"obj_button_m_toggle_parent","order":3,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
+  ],
 }

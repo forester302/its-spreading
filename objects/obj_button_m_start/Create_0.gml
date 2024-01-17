@@ -8,5 +8,5 @@ button_text = ""
 // Sets the function to move to rm_game when the button is released
 activate_button = function() 
 {
-	room_goto(rm_game)
+	script_execute(scr_fade_to_room, rm_game, 60, c_white);
 }

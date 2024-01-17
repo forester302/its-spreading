@@ -92,6 +92,7 @@
     {"id":{"name":"spr_npc_f","path":"sprites/spr_npc_f/spr_npc_f.yy",},},
     {"id":{"name":"snd_temp_theme","path":"sounds/snd_temp_theme/snd_temp_theme.yy",},},
     {"id":{"name":"fnt_default","path":"fonts/fnt_default/fnt_default.yy",},},
+    {"id":{"name":"obj_button_m_toggle_parent","path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},},
     {"id":{"name":"obj_npc_2","path":"objects/obj_npc_2/obj_npc_2.yy",},},
     {"id":{"name":"spr_station","path":"sprites/spr_station/spr_station.yy",},},
     {"id":{"name":"ts_floor","path":"tilesets/ts_floor/ts_floor.yy",},},

@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_button_m_debug",
+  "name": "obj_button_m_toggle_parent",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Main",
-    "path": "folders/Objects/Menu/Main.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Menu.yy",
   },
   "parentObjectId": {
-    "name": "obj_button_m_toggle_parent",
-    "path": "objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",
+    "name": "obj_button_m_parent",
+    "path": "objects/obj_button_m_parent/obj_button_m_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_m_button",
-    "path": "sprites/spr_m_button/spr_m_button.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
