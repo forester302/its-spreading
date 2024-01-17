@@ -7,5 +7,6 @@
     {"name":"obj_button_m_parent","order":2,"path":"objects/obj_button_m_parent/obj_button_m_parent.yy",},
     {"name":"obj_logo","order":1,"path":"objects/obj_logo/obj_logo.yy",},
     {"name":"obj_button_m_toggle_parent","order":3,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
+    {"name":"obj_data_manager","order":1,"path":"objects/obj_data_manager/obj_data_manager.yy",},
   ],
 }

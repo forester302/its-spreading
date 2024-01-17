@@ -1,6 +1,11 @@
 // [Initialize] Sets the default speed of the NPCs
 npc_speed = 6;
 
+// Modifies the radius the virus can spread TO this NPC
+npc_infection_radius = 0;
+// Modifier for how long the virus lasts in this npc (higher is longer)
+npc_health_level = 1000
+
 // Disables the animation of the NPC
 image_speed = 0
 
@@ -11,10 +16,6 @@ image_speed = 0
 // If pathfinding is set to basic
 if (global.pathfinding)
 {
-
-
-
-
 	// [Initialize] Creates a blank path set to "path"
 	path = path_add()
 }
@@ -42,3 +43,6 @@ pre_pos_y = y
 infected_level = 0;
 // [Initialize] Timer for how long this NPC has been in the radius of an infected NPC for
 infected_timer = 0;
+
+// [Initalize] Timer for how long this NPC has been infected
+self_infected_timer = 0;

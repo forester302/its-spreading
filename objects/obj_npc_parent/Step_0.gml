@@ -159,7 +159,8 @@ for (var _i = 0; _i < instance_number(obj_npc_parent); _i++)
 	/// Checks if the grabbed NPC is infected and if this NPC isn't
 	var _can_infect = (_npc_instance.infected_level > 0) and (infected_level == 0);
 	// [Initialize] Sets if this NPC is in range of the other to be infected
-	var _within_range = (_distance <= 100);
+	var _infection_radius = global.base_infection_radius + npc_infection_radius
+	var _within_range = (_distance <= _infection_radius);
 	
 	// If the grabbed NPC can infect this and if this NPC is within range
 	if (_can_infect and _within_range)
@@ -182,4 +183,14 @@ else if (!_infectable)
 {
 	// [Assign] Reset the timer
 	infected_timer = 0;
+}
+
+if (infected_level > 0) 
+{
+	self_infected_timer += 1
+}
+if (self_infected_timer >= global.base_longevity_npc + npc_health_level)
+{
+	self_infected_timer = 0
+	infected_level -= 1
 }

@@ -15,9 +15,6 @@ global.pathfinding = false
 // [Initialize] Sets global initialized to true (yes)
 global.initialized = true
 
-// [Initialize] Sets the infection time to 60 frames (1 second)
-global.infection_time = 60
-
 
 // Sets the settings for advanced pathfinding (hover over function and read)
 //mp_potential_settings(45, 5, 1, true)
