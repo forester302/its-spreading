@@ -4,9 +4,14 @@
     {"name":"Pause","order":5,"path":"folders/Objects/Menu/Pause.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_m_button_start","order":5,"path":"sprites/spr_m_button_start/spr_m_button_start.yy",},
+    {"name":"spr_m_button_quit","order":4,"path":"sprites/spr_m_button_quit/spr_m_button_quit.yy",},
     {"name":"obj_button_m_parent","order":2,"path":"objects/obj_button_m_parent/obj_button_m_parent.yy",},
+    {"name":"spr_p_button_volume","order":3,"path":"sprites/spr_p_button_volume/spr_p_button_volume.yy",},
+    {"name":"spr_m_button","order":2,"path":"sprites/spr_m_button/spr_m_button.yy",},
     {"name":"obj_logo","order":1,"path":"objects/obj_logo/obj_logo.yy",},
     {"name":"obj_button_m_toggle_parent","order":3,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
     {"name":"obj_data_manager","order":1,"path":"objects/obj_data_manager/obj_data_manager.yy",},
+    {"name":"spr_transp_button","order":1,"path":"sprites/spr_transp_button/spr_transp_button.yy",},
   ],
 }
