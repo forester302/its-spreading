@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_logo",
-    "path": "sprites/spr_logo/spr_logo.yy",
+    "name": "spr_sss_logo",
+    "path": "sprites/spr_sss_logo/spr_sss_logo.yy",
   },
   "spriteMaskId": null,
   "visible": true,

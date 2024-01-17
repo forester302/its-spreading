@@ -24,6 +24,9 @@ mp_potential_settings(45, 5, 1, true)
 // [Initialize] Sets whether the user pressed escape in rm_game or not to false
 global.pause_signal = false;
 
+// [Initialize] Sets whether the user tried to skip a room or not to false
+global.fade_transition = false;
+
 
 // [Initialize] Set global initialized to true (yes)
 global.initialized = true

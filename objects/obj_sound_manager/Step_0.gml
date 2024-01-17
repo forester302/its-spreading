@@ -3,7 +3,7 @@
 switch room
 {
 	// If the room is rm_menu
-	case rm_menu:
+	case rm_title:
 		// Stop all audio
 		audio_stop_all();
 		

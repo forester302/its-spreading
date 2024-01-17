@@ -15,5 +15,5 @@ text_color = c_green;
 // Sets the function to quit to the menu when the button is released
 activate_button = function() 
 {
-	room_goto(rm_menu);
+	room_goto(rm_title);
 }

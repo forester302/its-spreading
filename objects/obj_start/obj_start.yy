@@ -1,13 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Player",
-  "eventList": [],
+  "name": "obj_start",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Its Spreading",
-    "path": "Its Spreading.yyp",
+    "name": "Functions",
+    "path": "folders/Objects/Functions.yy",
   },
   "parentObjectId": null,
   "persistent": false,
