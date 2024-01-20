@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_station_parent",
+  "name": "obj_infected_particle",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -27,8 +27,11 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
-  "spriteId": null,
+  "solid": false,
+  "spriteId": {
+    "name": "spr_virus_particle",
+    "path": "sprites/spr_virus_particle/spr_virus_particle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
