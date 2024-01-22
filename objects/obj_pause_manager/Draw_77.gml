@@ -16,32 +16,36 @@ if (global.pause)
 		// Draw it on the current surface at (0, 0)
 		draw_surface(pause_surf, 0, 0);
 		
-		// Draws a rectangle covering the whole screen, filled in, black, and alpha 0.5
-		draw_set_alpha(0.9);
-		draw_set_color(c_black);
-		draw_rectangle(0, 0, (res_x - 1), (res_y - 1), false);
-		
-		// Resets alpha to default
-		draw_set_alpha(1.0);
-		
-		// If pause buttons are not created
-		if (!p_buttons_created)
+		// If the player paused using the escape key
+		if (pause_menu)
 		{
-			// [Initialize] Gets the id of the "Instances" layer
-			needed_layer = layer_get_id("Instances");
-			// [Initialize] Create an instance of the buttons on the "Instances" layer in the center of 
-			//				the screen
-			p_resume_button = instance_create_layer((res_x / 2), ((res_y / 2) - 50), needed_layer,
-									obj_button_p_resume);
-			p_volume_button = instance_create_layer((res_x / 2), (res_y / 2), needed_layer,
-									obj_button_p_volume);
-			p_menu_button = instance_create_layer((res_x / 2), (res_y / 2 + 50), needed_layer,
-									obj_button_p_menu);
-			p_quit_button = instance_create_layer((res_x / 2), ((res_y / 2) + 100), needed_layer,
-									obj_button_p_quit);
-			// [Assign] Pause buttons are now created
-			p_buttons_created = true;
-		}
+			// Draws a rectangle covering the whole screen, filled in, black, and alpha 0.5
+			draw_set_alpha(0.9);
+			draw_set_color(c_black);
+			draw_rectangle(0, 0, (res_x - 1), (res_y - 1), false);
+			
+			// Resets alpha to default
+			draw_set_alpha(1.0);
+			
+			// If pause buttons are not created
+			if (!p_buttons_created)
+			{
+				// [Initialize] Gets the id of the "Instances" layer
+				needed_layer = layer_get_id("Instances");
+				// [Initialize] Create an instance of the buttons on the "Instances" layer in the center of 
+				//				the screen
+				p_resume_button = instance_create_layer((res_x / 2), ((res_y / 2) - 50), needed_layer,
+										obj_button_p_resume);
+				p_volume_button = instance_create_layer((res_x / 2), (res_y / 2), needed_layer,
+										obj_button_p_volume);
+				p_menu_button = instance_create_layer((res_x / 2), (res_y / 2 + 50), needed_layer,
+										obj_button_p_menu);
+				p_quit_button = instance_create_layer((res_x / 2), ((res_y / 2) + 100), needed_layer,
+										obj_button_p_quit);
+				// [Assign] Pause buttons are now created
+				p_buttons_created = true;
+			}
+		}			
 	}
 	/// Called if the surface was lost for some reason
 	else
@@ -56,14 +60,21 @@ if (global.pause)
 	surface_reset_target();
 }
 
-// If the player hit the escape key while in rm_game
-if (global.pause_signal)
+// If the player pauses while in rm_game
+if (global.pause_signal || global.pause_game_signal)
 {
 	// If pause is false (if the game is not paused)
 	if (!global.pause)
 	{
 		// [Assign] Sets to true
 		global.pause = true
+		// [Assign] Depending on how the player paused, set to true one of the variables
+		if (global.pause_signal)
+		{
+			pause_menu = true;
+			double_pause = false;
+		}
+		else if (global.pause_game_signal) {pause_game = true;}
 	
 		// Deactivates all instances except this one
 		instance_deactivate_all(true);
@@ -71,6 +82,9 @@ if (global.pause_signal)
 		instance_activate_object(obj_input_manager);
 		instance_activate_object(obj_pause_manager);
 		instance_activate_object(obj_sound_manager);
+		instance_activate_object(obj_fade_controller);
+		instance_activate_object(obj_fade);
+		instance_activate_object(obj_camera_manager);
 		instance_activate_object(obj_button_p_parent);
 		
 		// [Assign] Sets to a new surface with the same height and width as the current surface
@@ -95,21 +109,22 @@ if (global.pause_signal)
 		// Backsup the surface to the buffer
 		buffer_get_surface(pause_surf_buffer, pause_surf, 0);
 	}
-	// If pause is true (if the game is paused)
-	else
-	{
-		// [Assign] Sets to true
-		global.pause = false;
-		
+	// If the player paused with escape key or (space bar and without menu)
+	else if ( global.pause_signal || (global.pause_game_signal && pause_game) )
+	{		
 		// Activates all instances
 		instance_activate_all();
 		
-		// Destroys pause buttons and sets pause buttons created to false
-		instance_destroy(p_quit_button.object_index);
-		instance_destroy(p_menu_button.object_index);
-		instance_destroy(p_volume_button.object_index);
-		instance_destroy(p_resume_button.object_index);
-		p_buttons_created = false;
+		// If the game was paused using the escape key
+		if (pause_menu)
+		{
+			// Destroys pause buttons and sets pause buttons created to false
+			instance_destroy(p_quit_button.object_index);
+			instance_destroy(p_menu_button.object_index);
+			instance_destroy(p_volume_button.object_index);
+			instance_destroy(p_resume_button.object_index);
+			p_buttons_created = false;
+		}
 		
 		/// Frees the surface from memory
 		if (surface_exists(pause_surf))
@@ -122,8 +137,18 @@ if (global.pause_signal)
 		{
 			buffer_delete(pause_surf_buffer);
 		}
+		
+		// [Assign] Sets to true
+		global.pause = false;
+		// [Assign] If game was paused using escape key, sets to true
+		if (global.pause_signal && pause_game) {double_pause = true;}
+		// [Assign] Sets to false
+		pause_menu = false;
+		// [Assign] Sets to false
+		pause_game = false;
 	}
 	
-	// Resets the pause signal
-	global.pause_signal = !global.pause_signal;
+	// Resets the pause signals (only pause_signal if double_pause is false)
+	if (global.pause_signal && !double_pause) {global.pause_signal = !global.pause_signal;}
+	else if (global.pause_game_signal) {global.pause_game_signal = !global.pause_game_signal;}
 }

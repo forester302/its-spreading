@@ -9,3 +9,15 @@ escape_keyb = vk_escape;
 
 // [Initialize] Sets to space bar
 space_keyb = vk_space;
+
+
+// mouseb = mouse bind
+
+// [Initialize] Sets to scroll up
+scroll_up_mouseb = m_scroll_up;
+
+// [Initialize] Sets to scroll down
+scroll_down_mouseb = m_scroll_down;
+
+// [Initialize] Sets to middle mouse button
+middle_mouseb = mb_middle;

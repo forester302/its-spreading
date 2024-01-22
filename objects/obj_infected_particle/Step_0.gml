@@ -10,5 +10,7 @@ if timer == 0
 }
 // decrement the timer
 timer -= 1
-// move down 1 pixel
-y += 1
+
+// moves around randomly by 1/2 pixel each frame
+y += random_range(-1, 1);
+x += random_range(-1, 1);
