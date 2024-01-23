@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_station_1",
+  "name": "obj_ui_menu_container",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Stations",
-    "path": "folders/Objects/Game/Stations.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "parentObjectId": {
-    "name": "obj_station_parent",
-    "path": "objects/obj_station_parent/obj_station_parent.yy",
+    "name": "obj_ui_parent",
+    "path": "objects/obj_ui_parent/obj_ui_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_station",
-    "path": "sprites/spr_station/spr_station.yy",
+    "name": "spr_m_button",
+    "path": "sprites/spr_m_button/spr_m_button.yy",
   },
   "spriteMaskId": null,
   "visible": true,

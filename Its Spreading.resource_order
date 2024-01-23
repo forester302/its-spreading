@@ -7,6 +7,7 @@
     {"name":"Objects","order":5,"path":"folders/Objects.yy",},
     {"name":"Main","order":5,"path":"folders/Objects/Menu/Main.yy",},
     {"name":"Pause","order":6,"path":"folders/Objects/Menu/Pause.yy",},
+    {"name":"UI","order":1,"path":"folders/Objects/UI.yy",},
     {"name":"Particle Systems","order":10,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":11,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":4,"path":"folders/Rooms.yy",},
@@ -17,6 +18,7 @@
     {"name":"Menu","order":2,"path":"folders/Sprites/Menu.yy",},
     {"name":"NPC","order":3,"path":"folders/Sprites/NPC.yy",},
     {"name":"Stations","order":4,"path":"folders/Sprites/Stations.yy",},
+    {"name":"UI","order":5,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":14,"path":"folders/Timelines.yy",},
   ],
@@ -28,8 +30,13 @@
     {"name":"spr_npc_f_walk_down","order":15,"path":"sprites/spr_npc_f_walk_down/spr_npc_f_walk_down.yy",},
     {"name":"obj_sound_manager","order":3,"path":"objects/obj_sound_manager/obj_sound_manager.yy",},
     {"name":"obj_fade","order":2,"path":"objects/obj_fade/obj_fade.yy",},
+
     {"name":"spr_npc_m_idle_right","order":6,"path":"sprites/spr_npc_m_idle_right/spr_npc_m_idle_right.yy",},
     {"name":"spr_status_icon","order":2,"path":"sprites/spr_status_icon/spr_status_icon.yy",},
+
+    {"name":"spr_status_icon","order":3,"path":"sprites/spr_status_icon/spr_status_icon.yy",},
+    {"name":"obj_ui_menu_container","order":3,"path":"objects/obj_ui_menu_container/obj_ui_menu_container.yy",},
+
     {"name":"fnt_default_bold","order":1,"path":"fonts/fnt_default_bold/fnt_default_bold.yy",},
     {"name":"obj_station_5","order":5,"path":"objects/obj_station_5/obj_station_5.yy",},
     {"name":"obj_input_manager","order":1,"path":"objects/obj_input_manager/obj_input_manager.yy",},
@@ -44,29 +51,49 @@
     {"name":"obj_button_m_path","order":2,"path":"objects/obj_button_m_path/obj_button_m_path.yy",},
     {"name":"spr_npc_m_idle_down","order":3,"path":"sprites/spr_npc_m_idle_down/spr_npc_m_idle_down.yy",},
     {"name":"obj_button_p_volume","order":1,"path":"objects/obj_button_p_volume/obj_button_p_volume.yy",},
+
     {"name":"spr_npc_f_idle_up","order":12,"path":"sprites/spr_npc_f_idle_up/spr_npc_f_idle_up.yy",},
+
+    {"name":"scr_get_room_info","order":1,"path":"scripts/scr_get_room_info/scr_get_room_info.yy",},
+    {"name":"obj_ui_parent","order":2,"path":"objects/obj_ui_parent/obj_ui_parent.yy",},
+
     {"name":"spr_m_button","order":4,"path":"sprites/spr_m_button/spr_m_button.yy",},
     {"name":"obj_virus","order":1,"path":"objects/obj_virus/obj_virus.yy",},
     {"name":"obj_fade_controller","order":1,"path":"objects/obj_fade_controller/obj_fade_controller.yy",},
+    {"name":"obj_camera_manager","order":4,"path":"objects/obj_camera_manager/obj_camera_manager.yy",},
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
     {"name":"spr_npc_m_walk_left","order":9,"path":"sprites/spr_npc_m_walk_left/spr_npc_m_walk_left.yy",},
     {"name":"obj_infected_particle","order":6,"path":"objects/obj_infected_particle/obj_infected_particle.yy",},
+
     {"name":"spr_npc_m_walk_up","order":8,"path":"sprites/spr_npc_m_walk_up/spr_npc_m_walk_up.yy",},
+
+    {"name":"obj_ui_menu_button","order":1,"path":"objects/obj_ui_menu_button/obj_ui_menu_button.yy",},
+
     {"name":"obj_button_p_menu","order":2,"path":"objects/obj_button_p_menu/obj_button_p_menu.yy",},
     {"name":"spr_npc_f_idle_left","order":13,"path":"sprites/spr_npc_f_idle_left/spr_npc_f_idle_left.yy",},
     {"name":"obj_station_1","order":1,"path":"objects/obj_station_1/obj_station_1.yy",},
+    {"name":"obj_ui_button","order":5,"path":"objects/obj_ui_button/obj_ui_button.yy",},
     {"name":"obj_pause_manager","order":2,"path":"objects/obj_pause_manager/obj_pause_manager.yy",},
+    {"name":"obj_ui_menu_contained_long_add","order":7,"path":"objects/obj_ui_menu_contained_long_add/obj_ui_menu_contained_long_add.yy",},
     {"name":"obj_button_p_parent","order":4,"path":"objects/obj_button_p_parent/obj_button_p_parent.yy",},
     {"name":"obj_station_4","order":4,"path":"objects/obj_station_4/obj_station_4.yy",},
+    {"name":"obj_ui_menu_contained_parent","order":4,"path":"objects/obj_ui_menu_contained_parent/obj_ui_menu_contained_parent.yy",},
     {"name":"obj_button_p_quit","order":3,"path":"objects/obj_button_p_quit/obj_button_p_quit.yy",},
     {"name":"obj_button_m_debug","order":1,"path":"objects/obj_button_m_debug/obj_button_m_debug.yy",},
     {"name":"spr_npc_f_walk_left","order":17,"path":"sprites/spr_npc_f_walk_left/spr_npc_f_walk_left.yy",},
     {"name":"spr_virus","order":1,"path":"sprites/spr_virus/spr_virus.yy",},
     {"name":"spr_npc_f","order":1,"path":"sprites/spr_npc_f/spr_npc_f.yy",},
+
     {"name":"spr_npc_f_idle_down","order":11,"path":"sprites/spr_npc_f_idle_down/spr_npc_f_idle_down.yy",},
     {"name":"obj_button_m_toggle_parent","order":2,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
     {"name":"obj_npc_2","order":2,"path":"objects/obj_npc_2/obj_npc_2.yy",},
     {"name":"spr_npc_f_walk_right","order":18,"path":"sprites/spr_npc_f_walk_right/spr_npc_f_walk_right.yy",},
+
+    {"name":"obj_ui_menu_contained_spread_add","order":6,"path":"objects/obj_ui_menu_contained_spread_add/obj_ui_menu_contained_spread_add.yy",},
+    
+    
+    {"name":"obj_ui_menu_contained_detect_add","order":8,"path":"objects/obj_ui_menu_contained_detect_add/obj_ui_menu_contained_detect_add.yy",},
+
     {"name":"obj_npc_1","order":1,"path":"objects/obj_npc_1/obj_npc_1.yy",},
     {"name":"spr_transp_button","order":5,"path":"sprites/spr_transp_button/spr_transp_button.yy",},
     {"name":"obj_button_m_quit","order":3,"path":"objects/obj_button_m_quit/obj_button_m_quit.yy",},

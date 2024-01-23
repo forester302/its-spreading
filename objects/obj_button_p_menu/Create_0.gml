@@ -15,5 +15,6 @@ text_color = c_green;
 // Sets the function to quit to the menu when the button is released
 activate_button = function() 
 {
+	camera_destroy(view_camera[0]);
 	script_execute(scr_fade_to_room, rm_title, 60, c_white);
 }
