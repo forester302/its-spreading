@@ -80,11 +80,8 @@
     {"id":{"name":"obj_button_m_path","path":"objects/obj_button_m_path/obj_button_m_path.yy",},},
     {"id":{"name":"spr_npc_m_idle_down","path":"sprites/spr_npc_m_idle_down/spr_npc_m_idle_down.yy",},},
     {"id":{"name":"obj_button_p_volume","path":"objects/obj_button_p_volume/obj_button_p_volume.yy",},},
-
     {"id":{"name":"spr_npc_f_idle_up","path":"sprites/spr_npc_f_idle_up/spr_npc_f_idle_up.yy",},},
-
     {"id":{"name":"scr_get_room_info","path":"scripts/scr_get_room_info/scr_get_room_info.yy",},},
-
     {"id":{"name":"obj_station_parent","path":"objects/obj_station_parent/obj_station_parent.yy",},},
     {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
     {"id":{"name":"obj_button_m_start","path":"objects/obj_button_m_start/obj_button_m_start.yy",},},
@@ -96,11 +93,8 @@
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"spr_npc_m_walk_left","path":"sprites/spr_npc_m_walk_left/spr_npc_m_walk_left.yy",},},
     {"id":{"name":"obj_infected_particle","path":"objects/obj_infected_particle/obj_infected_particle.yy",},},
-
     {"id":{"name":"spr_npc_m_walk_up","path":"sprites/spr_npc_m_walk_up/spr_npc_m_walk_up.yy",},},
-
     {"id":{"name":"obj_ui_menu_button","path":"objects/obj_ui_menu_button/obj_ui_menu_button.yy",},},
-
     {"id":{"name":"obj_logo","path":"objects/obj_logo/obj_logo.yy",},},
     {"id":{"name":"obj_button_p_menu","path":"objects/obj_button_p_menu/obj_button_p_menu.yy",},},
     {"id":{"name":"spr_npc_f_idle_left","path":"sprites/spr_npc_f_idle_left/spr_npc_f_idle_left.yy",},},
@@ -129,11 +123,8 @@
     {"id":{"name":"obj_data_manager","path":"objects/obj_data_manager/obj_data_manager.yy",},},
     {"id":{"name":"spr_station","path":"sprites/spr_station/spr_station.yy",},},
     {"id":{"name":"ts_floor","path":"tilesets/ts_floor/ts_floor.yy",},},
-
     {"id":{"name":"spr_npc_f_walk_right","path":"sprites/spr_npc_f_walk_right/spr_npc_f_walk_right.yy",},},
-
     {"id":{"name":"obj_ui_menu_contained_stats","path":"objects/obj_ui_menu_contained_stats/obj_ui_menu_contained_stats.yy",},},
-
     {"id":{"name":"obj_npc_1","path":"objects/obj_npc_1/obj_npc_1.yy",},},
     {"id":{"name":"spr_transp_button","path":"sprites/spr_transp_button/spr_transp_button.yy",},},
     {"id":{"name":"obj_button_m_quit","path":"objects/obj_button_m_quit/obj_button_m_quit.yy",},},

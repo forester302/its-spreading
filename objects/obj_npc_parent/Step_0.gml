@@ -111,24 +111,38 @@ var _vel_x = pre_pos_x - x
 var _vel_y = pre_pos_y - y
 
 // If the x velocity is positive, sets the NPC's sprite to face left
-if (_vel_x > 0) image_index = 2
+if (_vel_x > 0)
+{
+	if (sprite_index != npc_sprites[1]) sprite_index = npc_sprites[1]
+}
 // If the x velocity is negative, sets the NPC's sprite to face right
-else if (_vel_x < 0) image_index = 3
+else if (_vel_x < 0)
+{
+	if (sprite_index != npc_sprites[2]) sprite_index = npc_sprites[2]
+}
 // If the x velocity is zero
 else {
 	// If the y velocity is positive, sets the NPC's sprite to face up
-	if (_vel_y > 0) image_index = 1
+	if (_vel_y > 0)
+	{
+		if (sprite_index != npc_sprites[3]) sprite_index = npc_sprites[3]
+	}
 	// If the y velocity is negative, sets the NPC's sprite to face down
-	else if (_vel_y < 0) image_index = 0
-	// If the y velocity is zero, sets the NPC's sprite to face down (idle)
-	else image_index = 0
+	else if (_vel_y < 0)
+	{
+		if (sprite_index != npc_sprites[0]) sprite_index = npc_sprites[0]
+	}
+	// If the y velocity is zero, sets the NPC's sprite to (idle)
+	else {
+		// if the current sprite is not an idle sprites
+		if (not array_find_index(npc_idle_sprites, function(_e, _i) {return _e == sprite_index}) > 0) {
+			if (sprite_index == npc_sprites[0]) sprite_index = npc_idle_sprites[0]
+			else if (sprite_index == npc_sprites[1]) sprite_index = npc_idle_sprites[1]
+			else if (sprite_index == npc_sprites[2]) sprite_index = npc_idle_sprites[2]
+			else if (sprite_index == npc_sprites[3]) sprite_index = npc_idle_sprites[3]
+		}
+	}
 }
-
-//// For Forester
-//Change sprite with
-//layer_sprite_change(spr_name, 0)
-//for animated sprites
-//might need to be checked
 
 // [Assign] Sets the previous x to the current x
 pre_pos_x = x
