@@ -6,6 +6,8 @@
   "ResourceOrderSettings": [
     {"name":"spr_m_button_start","order":7,"path":"sprites/spr_m_button_start/spr_m_button_start.yy",},
     {"name":"spr_m_button_quit","order":6,"path":"sprites/spr_m_button_quit/spr_m_button_quit.yy",},
+    {"name":"spr_ts_floor2","order":1,"path":"sprites/spr_ts_floor2/spr_ts_floor2.yy",},
+    {"name":"ts_floor2","order":1,"path":"tilesets/ts_floor2/ts_floor2.yy",},
     {"name":"obj_button_m_parent","order":5,"path":"objects/obj_button_m_parent/obj_button_m_parent.yy",},
     {"name":"spr_p_button_volume","order":5,"path":"sprites/spr_p_button_volume/spr_p_button_volume.yy",},
     {"name":"spr_m_button","order":4,"path":"sprites/spr_m_button/spr_m_button.yy",},
@@ -15,6 +17,11 @@
     {"name":"obj_button_p_parent","order":2,"path":"objects/obj_button_p_parent/obj_button_p_parent.yy",},
     {"name":"spr_virus","order":2,"path":"sprites/spr_virus/spr_virus.yy",},
     {"name":"obj_button_m_toggle_parent","order":1,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
+    {"name":"spr_table_h","order":2,"path":"sprites/spr_table_h/spr_table_h.yy",},
     {"name":"spr_transp_button","order":1,"path":"sprites/spr_transp_button/spr_transp_button.yy",},
+    {"name":"spr_table_v","order":1,"path":"sprites/spr_table_v/spr_table_v.yy",},
+    {"name":"obj_station_1a","order":1,"path":"objects/obj_station_1a/obj_station_1a.yy",},
+    {"name":"obj_station_1b","order":2,"path":"objects/obj_station_1b/obj_station_1b.yy",},
+    {"name":"rm_game2","order":1,"path":"rooms/rm_game2/rm_game2.yy",},
   ],
 }
