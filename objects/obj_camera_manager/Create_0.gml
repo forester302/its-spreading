@@ -19,7 +19,7 @@ view_camera[0] = camera_create_view(0, 0, room_x, room_y, 0, -1, -1, -1, 0, 0);
 need_to_scroll = false;
 
 //
-zoom_speed = 600;
+zoom_speed = 1500;
 
 
 //
@@ -38,7 +38,7 @@ cam_move_speed = 0.1;
 check_mouse = 0;
 
 //
-target_mouse_x_val = 0;
-target_mouse_y_val = 0;
+static_mouse_x_val = 0;
+static_mouse_y_val = 0;
 
 index = 0;

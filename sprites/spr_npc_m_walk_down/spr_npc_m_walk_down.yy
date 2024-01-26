@@ -26,7 +26,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"99f3e333-0b3d-4988-a301-7e0db972ee13","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 7,
   "parent": {
     "name": "NPC",
     "path": "folders/Sprites/NPC.yy",
@@ -66,7 +66,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 32,
+    "yorigin": 64,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

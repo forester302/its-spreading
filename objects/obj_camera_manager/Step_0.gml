@@ -10,6 +10,10 @@ if (global.camera_scroll != 0)
 			// 
 			target_width_val = width_val - (zoom_speed / 9);
 			target_height_val = height_val - (zoom_speed / 16);
+			
+			//
+			static_mouse_x_val = mouse_x;
+			static_mouse_y_val = mouse_y;
 		}
 	}
 	//
@@ -24,14 +28,10 @@ if (global.camera_scroll != 0)
 		}
 	}
 	
-//	//
-//	pos_to_zoom_x_ratio = (mouse_x - cam_x_val) / (width_val - mouse_x);
-//	pos_to_zoom_y_ratio = (mouse_y - cam_y_val) / (height_val - mouse_y);
-//	//
-//	if (pos_to_zoom_x_ratio <= 1) {pos_to_zoom_x_ratio = cam_move_speed / pos_to_zoom_x_ratio}
-//	else {pos_to_zoom_x_ratio *= zoom_speed}
-//	if (pos_to_zoom_y_ratio <= 1) {pos_to_zoom_y_ratio = cam_move_speed / pos_to_zoom_x_ratio}
-//	else {pos_to_zoom_y_ratio *= zoom_speed}
+	//
+	pos_to_zoom_x_ratio = (mouse_x - cam_x_val) / (width_val - mouse_x);
+	pos_to_zoom_y_ratio = (mouse_y - cam_y_val) / (height_val - mouse_y);
+
 	
 	//
 	need_to_scroll = true;
@@ -44,23 +44,23 @@ if (need_to_scroll)
 	if ( (width_val > target_width_val) && (height_val > target_height_val) )
 	{
 		//
-		width_val -= (zoom_speed / 90);
-		height_val -= (zoom_speed / 160);
+		width_val -= (zoom_speed / 9) / 10;
+		height_val -= (zoom_speed / 16) / 10;
 		
-		//	//
-		//	cam_x_val += (zoom_speed / 90) * pos_to_zoom_y_ratio;
-		//	cam_y_val += (zoom_speed / 160) * pos_to_zoom_x_ratio;
+		//
+		cam_x_val += ( (zoom_speed / 90) * (static_mouse_x_val / room_x) );
+		cam_y_val += ( (zoom_speed / 160) * (static_mouse_y_val / room_y) );
 	}
 	//
 	else if ( (width_val < target_width_val) && (height_val < target_height_val) )
 	{
 		//
-		width_val += zoom_speed / 90;
-		height_val += zoom_speed / 160;
+		width_val += (zoom_speed / 9) / 10;
+		height_val += (zoom_speed / 16) / 10;
 			
-		//	//
-		//	cam_x_val -= zoom_speed / 45//90;
-		//	cam_y_val -= zoom_speed / 80//160;
+		//
+		cam_x_val -= ( (zoom_speed / 9) / 10) / 2;
+		cam_y_val -= ( (zoom_speed / 16) / 10) / 2;
 	}
 	//
 	else {need_to_scroll = false}

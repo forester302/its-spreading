@@ -25,6 +25,8 @@ mp_potential_settings(45, 5, 1, true)
 global.pause_signal = false;
 // [Initialize] Sets whether the user pressed the space bar in rm_game or not to false
 global.pause_game_signal = false;
+// [Initialize] Sets whether the game should be paused without menu or not to false
+global.pause_game = false;
 
 // [Initialize] Sets whether the user tried to skip a room or not to false
 global.fade_transition = false;
