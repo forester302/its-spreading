@@ -63,7 +63,8 @@ else
 			{
 				if (place_meeting(_path_point_x, _path_point_y, obj_wall) or
 					place_meeting(_path_point_x, _path_point_y, obj_station_parent) or
-					(abs(_path_point_x - x) < 200 and abs(_path_point_y - y) < 200))
+					(abs(_path_point_x - x) < 200 and abs(_path_point_y - y) < 200) or
+					tilemap_get_at_pixel(layer_tilemap_get_id("floor"),_path_point_x, _path_point_y) == -1)
 				{
 					// [Assign] Generate random x and y values within rm_game
 					_path_point_x = random_range(0, room_width - 1);
