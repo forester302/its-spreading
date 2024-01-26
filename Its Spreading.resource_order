@@ -17,6 +17,8 @@
     {"name":"obj_button_p_parent","order":2,"path":"objects/obj_button_p_parent/obj_button_p_parent.yy",},
     {"name":"spr_virus","order":2,"path":"sprites/spr_virus/spr_virus.yy",},
     {"name":"obj_button_m_toggle_parent","order":1,"path":"objects/obj_button_m_toggle_parent/obj_button_m_toggle_parent.yy",},
+    {"name":"snd_menu_theme","order":1,"path":"sounds/snd_menu_theme/snd_menu_theme.yy",},
+    {"name":"obj_sound_manager_title","order":1,"path":"objects/obj_sound_manager_title/obj_sound_manager_title.yy",},
     {"name":"spr_table_h","order":2,"path":"sprites/spr_table_h/spr_table_h.yy",},
     {"name":"spr_transp_button","order":1,"path":"sprites/spr_transp_button/spr_transp_button.yy",},
     {"name":"spr_table_v","order":1,"path":"sprites/spr_table_v/spr_table_v.yy",},
