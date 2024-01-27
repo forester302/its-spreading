@@ -10,6 +10,8 @@ escape_keyb = vk_escape;
 // [Initialize] Sets to space bar
 space_keyb = vk_space;
 
+f_keyb = ord("f");
+
 
 // mouseb = mouse bind
 
