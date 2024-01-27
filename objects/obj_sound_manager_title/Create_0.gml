@@ -8,7 +8,7 @@ if room == (rm_title){
 		audio_stop_sound(snd_temp_theme);
         audio_play_sound(snd_menu_theme, 10, true);
 }
-if room == (rm_game){
+if room == (rm_game2){
     audio_stop_sound(snd_menu_theme)
 }
 

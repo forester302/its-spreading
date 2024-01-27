@@ -1,5 +1,5 @@
 // [Initialize] Sets the default speed of the NPCs
-npc_speed = 6;
+npc_speed = 1.5;
 //
 work_speed = 1;
 

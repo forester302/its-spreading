@@ -1,7 +1,7 @@
 // Spreadability level shown to the player
 global.spreadability = 1;
 // Radius the virus can spread from an npc
-global.base_infection_radius = 100;
+global.base_infection_radius = 20;
 // 
 global.infection_chance_needed = 99;
 
