@@ -1,7 +1,14 @@
 // If debug mode is on
 if (global.debug)
 {
-	var _infection_radius = global.base_infection_radius + npc_infection_radius
+	if (infected_level > 0)
+	{
+		var _infection_radius = global.base_infection_radius + npc_infection_radius + (global.spreadability * 5);
+	}
+	else
+	{
+		var _infection_radius = global.base_infection_radius + npc_infection_radius;
+	}
 	// Draw circles for infection radius
 	draw_set_color(c_blue)
 	draw_circle(x, y, _infection_radius, true)
@@ -36,7 +43,7 @@ if (infected_level > 0)
 	var _x2 = x+15
 	var _y2 = y-40
 
-	var _val = 1 - (self_infected_timer / (global.base_longevity_npc + npc_health_level))
+	var _val = 1 - (self_infected_timer / (global.base_longevity_npc + npc_health_level + (global.longevity * 60)))
 
 	draw_rectangle(_x1, _y1, _x1+(_x2-_x1)*_val, _y2, false)
 }

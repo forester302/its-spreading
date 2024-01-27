@@ -25,15 +25,10 @@ else
 	// If pathfinding is simple and the path is finished, sets path is finished to true
 	if (global.pathfinding and path_position == 1) {path_completed = true};
 	// If pathfinding is advanced and the NPC is at the target
-	show_debug_message(floor(target_x))
-	show_debug_message(floor(target_y))
-	show_debug_message(floor(x))
-	show_debug_message(floor(y))
 	if ( (!global.pathfinding) and 
 		( ( (floor(target_x) + sprite_width) > floor(x) ) and (floor(x) > (floor(target_x) - sprite_width) ) ) and
 		( ( (floor(target_y) + (sprite_height / 10) ) > floor(y) and (floor(y) > (floor(target_y) - (sprite_height / 10) ) ) ) ) )
 	{
-		show_debug_message("here")
 		// Sets path is finished to true
 		path_completed = true;
 	}
@@ -77,6 +72,8 @@ else
 			// Set the target position
 			target_x = _path_point_x;
 			target_y = _path_point_y;
+			
+			path_start_timer = 60;
 		}
 		// If the path type is not equal to 0
 		else
@@ -97,10 +94,12 @@ else
 			// Set the target position
 			target_x = _chosen_station.x;
 			target_y = _chosen_station.y;
+			
+			path_start_timer = 60 * work_speed;
 		}
 		
 		// Sets the timer to 60 (frames)
-		path_start_timer = 60;
+		//path_start_timer = 60;
 		// Sets the path to not be completed
 		path_completed = false
 		
@@ -138,22 +137,35 @@ else
 		// [Initialize] Sets if this NPC can be infected
 		/// Checks if the grabbed NPC is infected and if this NPC isn't
 		var _can_infect = (_npc_instance.infected_level > 0) and (infected_level == 0);
-		// [Initialize] Sets if this NPC is in range of the other to be infected
-		var _infection_radius = global.base_infection_radius + npc_infection_radius
+		if (infected_level > 0)
+		{
+			// [Initialize] Sets if this NPC is in range of the other to be infected
+			var _infection_radius = global.base_infection_radius + npc_infection_radius + (global.spreadability * 5);
+		}
+		else
+		{
+			var _infection_radius = global.base_infection_radius + npc_infection_radius;
+		}
 		var _within_range = (_distance <= _infection_radius);
 		
 		// If the grabbed NPC can infect this and if this NPC is within range
 		if (_can_infect and _within_range)
 		{
-			// Increments timer by one frame
-			infected_timer += 1;
+			//// Increments timer by one frame
+			infection_chance_min += 0.5;
 			// [Assign] Sets if this NPC can be infected this game frame
 			_infectable = true;
+			show_debug_message("here")
+		}
+		else
+		{
+			infection_chance_min = global.spreadability;
+			show_debug_message("here 2")
 		}
 	}
 	
 	// If this NPC is infectable and it's been (infection_time) frames
-	if (_infectable and (infected_timer > global.infection_time))
+	if (_infectable and (random_range(infection_chance_min, 1) > global.infection_chance_needed))
 	{
 		// [Assign] Sets the infected level of this NPC to 1
 		infected_level = 1;
@@ -162,14 +174,14 @@ else
 	else if (!_infectable)
 	{
 		// [Assign] Reset the timer
-		infected_timer = 0;
+		//infected_timer = 0;
 	}
 	
 	if (infected_level > 0) 
 	{
 		self_infected_timer += 1
 	}
-	if (self_infected_timer >= global.base_longevity_npc + npc_health_level)
+	if (self_infected_timer >= global.base_longevity_npc + npc_health_level + (global.longevity * 60) )
 	{
 		self_infected_timer = 0
 		infected_level -= 1
@@ -218,3 +230,8 @@ else
 pre_pos_x = x
 // [Assign] Sets the previous y to the current y
 pre_pos_y = y
+
+if (infected_level > 0)
+{
+	show_debug_message(infection_chance_min)
+}

@@ -2,6 +2,6 @@
 event_inherited();
 
 
-infected = true;
+infected = 0;
 infected_time = 0;
-infected_target_time = 600;
+infected_target_time = 0;

@@ -1,5 +1,7 @@
 // [Initialize] Sets the default speed of the NPCs
 npc_speed = 6;
+//
+work_speed = 1;
 
 // Modifies the radius the virus can spread TO this NPC
 npc_infection_radius = 0;
@@ -38,8 +40,8 @@ pre_pos_y = y
 
 // [Initialize] Sets the infected level to 0 (higher numbers means more infected, 9 being the max)
 infected_level = 0;
-// [Initialize] Timer for how long this NPC has been in the radius of an infected NPC for
-infected_timer = 0;
+// 
+infection_chance_min = 0;
 
 // [Initalize] Timer for how long this NPC has been infected
 self_infected_timer = 0;

@@ -1,13 +1,13 @@
 // Spreadability level shown to the player
-global.spreadability = 0;
+global.spreadability = 1;
 // Radius the virus can spread from an npc
 global.base_infection_radius = 100;
 // 
-global.infection_time = 60;
+global.infection_chance_needed = 99;
 
 
 // Longevity level shown to the player
-global.longevity = 0;
+global.longevity = 1;
 
 // How long the virus lasts in an NPC
 global.base_longevity_npc = 1;
@@ -33,3 +33,5 @@ function win() {
 	global.won = true
 	
 }
+
+global.experience = 0;
