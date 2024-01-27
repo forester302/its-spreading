@@ -113,8 +113,8 @@ else
 			mp_potential_path(path, target_x, target_y, npc_speed, _factor, false);
 		}
 	}
-	
-	
+
+
 	// Infection of this NPC
 	
 	// [Initializing] Sets whether this NPC can be infected this frame to false
@@ -155,17 +155,21 @@ else
 			infection_chance_min += 0.5;
 			// [Assign] Sets if this NPC can be infected this game frame
 			_infectable = true;
-			show_debug_message("here")
 		}
 		else
 		{
 			infection_chance_min = global.spreadability;
-			show_debug_message("here 2")
 		}
 	}
-	
+	show_debug_message(global.cough_ability)
+	if (_infectable and global.cough_ability == 1)
+	{
+		infected_level = 1;
+		global.cough_ability = 0;
+		show_debug_message("here")
+	}
 	// If this NPC is infectable and it's been (infection_time) frames
-	if (_infectable and (random_range(infection_chance_min, 1) > global.infection_chance_needed))
+	else if (_infectable and (random_range(infection_chance_min, 1) > global.infection_chance_needed))
 	{
 		// [Assign] Sets the infected level of this NPC to 1
 		infected_level = 1;
@@ -230,8 +234,3 @@ else
 pre_pos_x = x
 // [Assign] Sets the previous y to the current y
 pre_pos_y = y
-
-if (infected_level > 0)
-{
-	show_debug_message(infection_chance_min)
-}

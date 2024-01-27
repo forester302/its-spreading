@@ -28,6 +28,10 @@ global.pause_game_signal = false;
 // [Initialize] Sets whether the game should be paused without menu or not to false
 global.pause_game = false;
 
+
+global.cough_ability = 0;
+
+
 // [Initialize] Sets whether the user tried to skip a room or not to false
 global.fade_transition = false;
 

@@ -2,7 +2,7 @@
 if (keyboard_check_released(escape_keyb))
 {
 	// If the current room is rm_game
-	if (room == rm_game or room == rm_game2)
+	if (room == rm_game2 or room == rm_game2)
 	{
 		// [Assign] Sets it to the opposite of what it currently is
 		global.pause_signal = !global.pause_signal;
@@ -13,11 +13,19 @@ if (keyboard_check_released(escape_keyb))
 if (keyboard_check_released(space_keyb))
 {
 	// If the current room is rm_game
-	if (room == rm_game)
+	if (room == rm_game2)
 	{
 		// [Assign] Sets it to the opposite of what it currently is
 		global.pause_game_signal = !global.pause_game_signal;
 	}
+}
+
+if (keyboard_check_released(f_keyb))
+{
+	show_debug_message("here")
+	if (room == rm_game2)
+		global.cough_ability = 1;
+		show_debug_message("here")
 }
 	
 
