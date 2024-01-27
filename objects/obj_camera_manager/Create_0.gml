@@ -15,6 +15,7 @@ view_visible[0] = true;
 //
 view_camera[0] = camera_create_view(0, 0, room_x, room_y, 0, -1, -1, -1, 0, 0);
 
+
 //
 need_to_scroll = false;
 

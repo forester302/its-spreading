@@ -8,6 +8,7 @@
     {"name":"spr_m_button_quit","order":6,"path":"sprites/spr_m_button_quit/spr_m_button_quit.yy",},
     {"name":"spr_ts_floor2","order":1,"path":"sprites/spr_ts_floor2/spr_ts_floor2.yy",},
     {"name":"ts_floor2","order":1,"path":"tilesets/ts_floor2/ts_floor2.yy",},
+    {"name":"spr_wall_empty","order":2,"path":"sprites/spr_wall_empty/spr_wall_empty.yy",},
     {"name":"obj_button_m_parent","order":5,"path":"objects/obj_button_m_parent/obj_button_m_parent.yy",},
     {"name":"spr_p_button_volume","order":5,"path":"sprites/spr_p_button_volume/spr_p_button_volume.yy",},
     {"name":"spr_m_button","order":4,"path":"sprites/spr_m_button/spr_m_button.yy",},

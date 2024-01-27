@@ -3,7 +3,7 @@
 function scr_get_room_info(requested_value)
 {
 	// [Initialize] Gets info on rm_game, used for width and height
-	room_info = room_get_info(rm_game, false, false, false, false, false);
+	room_info = room_get_info(rm_game2, false, false, false, false, false);
 	// [Initialize] Starting at 0, sets to the index of the first occurence of the string
 	x_index = string_pos("width", room_info);
 	// [Initialize] Copies the specified string between the second and third parameter, then converts from

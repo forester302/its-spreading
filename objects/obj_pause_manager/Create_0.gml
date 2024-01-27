@@ -14,5 +14,5 @@ p_buttons_created = false;
 
 
 // [Initialize] Each variable is set to the room's corresponding value
-res_x = scr_get_room_info("x");
-res_y = scr_get_room_info("y");
+res_x = 1920;
+res_y = 1080;

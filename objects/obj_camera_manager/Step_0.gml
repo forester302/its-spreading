@@ -5,7 +5,7 @@ if (global.camera_scroll != 0)
 	if (global.camera_scroll == 1)
 	{
 		//
-		if (target_width_val > 1031 and target_height_val > 580)
+		if (target_width_val > 256 and target_height_val > 144)
 		{
 			// 
 			target_width_val = width_val - (zoom_speed / 9);
@@ -20,7 +20,7 @@ if (global.camera_scroll != 0)
 	else if (global.camera_scroll == -1)
 	{
 		//
-		if (target_width_val < 1920 and target_height_val < 1080)
+		if (target_width_val < room_width and target_height_val < room_height)
 		{
 			//
 			target_width_val = width_val + (zoom_speed / 9);
