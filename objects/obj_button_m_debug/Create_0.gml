@@ -6,7 +6,7 @@ get_determiner = function()
 	return global.debug;
 }
 
-label = "Debug "
+label = "Show Infection\nRadius\n(Recomended)\n "
 
 // [Overwrite] Sets the text to be drawn
 /// ? : first queries if the bool in front is true; if it is, the left of the colon will run, otherwise

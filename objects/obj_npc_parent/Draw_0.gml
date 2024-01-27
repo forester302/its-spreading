@@ -10,6 +10,7 @@ if (global.debug)
 	draw_circle(target_x, target_y, 10, false)
 	
 	// If pathfinding is set to simple
+	/*
 	if (!global.pathfinding)
 	{
 		// Draws a line to the target (rather than to every point avoiding collision)
@@ -19,7 +20,7 @@ if (global.debug)
 	{
 		// Draws the path to target
 		draw_path(path, x, y, true)
-	}
+	}*/
 }
 
 // Draws the sprite of this NPC
