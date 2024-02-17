@@ -14,7 +14,7 @@ if (global.debug)
 	draw_circle(x, y, _infection_radius, true)
 	
 	// Draw circle for pathfinding target
-	draw_circle(target_x, target_y, 10, false)
+	//draw_circle(target_x, target_y, 10, false)
 	
 	// If pathfinding is set to simple
 	/*
